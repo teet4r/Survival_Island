@@ -2329,7 +2329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec17b55f4b8a9d74d835f5bb31f6bf36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 20
+  maxHp: 10
   weaponCollider:
   - {fileID: 5451044815732981522}
   - {fileID: 1681961972867575864}

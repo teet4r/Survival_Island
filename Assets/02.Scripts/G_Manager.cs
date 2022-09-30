@@ -45,11 +45,29 @@ public class G_Manager : MonoBehaviour
         {
             timePrev = Time.time;
             if (GameObject.FindGameObjectsWithTag("Zombie").Length < zombieMaxCnt)
-                CreateZombie();
+            {
+                int idx = Random.Range(0, points.Length);
+                var zombie = ObjectPool.instance.GetZombie();
+                zombie.transform.position = points[idx].position;
+                zombie.transform.rotation = points[idx].rotation;
+                zombie.gameObject.SetActive(true);
+            }
             if (GameObject.FindGameObjectsWithTag("Monster").Length < monsterMaxCnt)
-                CreateMonster();
+            {
+                int idx = Random.Range(0, points.Length);
+                var monster = ObjectPool.instance.GetMonster();
+                monster.transform.position = points[idx].position;
+                monster.transform.rotation = points[idx].rotation;
+                monster.gameObject.SetActive(true);
+            }
             if (GameObject.FindGameObjectsWithTag("Skeleton").Length < skeletonMaxCnt)
-                CreateSkeleton();
+            {
+                int idx = Random.Range(0, points.Length);
+                var skeleton = ObjectPool.instance.GetSkeleton();
+                skeleton.transform.position = points[idx].position;
+                skeleton.transform.rotation = points[idx].rotation;
+                skeleton.gameObject.SetActive(true);
+            }
         }
     }
 

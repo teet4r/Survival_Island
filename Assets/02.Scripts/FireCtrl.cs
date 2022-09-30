@@ -59,7 +59,11 @@ public class FireCtrl : MonoBehaviour
     void Fire()
     {
         if (isReloading) return;
-        Instantiate(bullet, firePos.position, firePos.rotation);
+        var bullet = ObjectPool.instance.GetBullet();
+        bullet.gameObject.transform.position = firePos.position;
+        bullet.gameObject.transform.rotation = firePos.rotation;
+        bullet.gameObject.SetActive(true);
+
         combatAni.Play("fire");
         audioSource.PlayOneShot(bulletSound, 1f);
         ++bulletCount;

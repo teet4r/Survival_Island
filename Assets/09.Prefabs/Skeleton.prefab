@@ -1104,7 +1104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec17b55f4b8a9d74d835f5bb31f6bf36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 15
+  maxHp: 10
   weaponCollider:
   - {fileID: 3107563453113916174}
   bloodEffect: {fileID: 2918193354468523274, guid: feccbfeba1a3bbf4cb7c82b5303c74a1,

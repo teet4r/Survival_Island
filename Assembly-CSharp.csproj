@@ -71,6 +71,7 @@
     <Compile Include="Assets\02.Scripts\LightOnOff.cs" />
     <Compile Include="Assets\02.Scripts\LookAtCamera.cs" />
     <Compile Include="Assets\02.Scripts\MonsterCtrl.cs" />
+    <Compile Include="Assets\02.Scripts\ObjectPool.cs" />
     <Compile Include="Assets\02.Scripts\PlayerDamaged.cs" />
     <Compile Include="Assets\02.Scripts\RunningGun.cs" />
     <Compile Include="Assets\02.Scripts\S_Manager.cs" />

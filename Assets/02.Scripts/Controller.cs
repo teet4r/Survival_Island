@@ -16,13 +16,19 @@ public class Controller : MonoBehaviour
     public float attackDist; // 공격 범위
 
     Transform playerTr;
-    GetDamage getDamage;
 
-    void Start()
+    public GetDamage getDamage { get; private set; }
+
+    void Awake()
     {
         getDamage = GetComponent<GetDamage>();
+    }
+
+    void OnEnable()
+    {
         playerTr = GameObject.FindWithTag("Player").GetComponent<Transform>();
     }
+
     void Update()
     {
         if (getDamage.isDie) return;
@@ -46,5 +52,10 @@ public class Controller : MonoBehaviour
             navMeshAgent.isStopped = false;
             animator.SetBool("IsTrace", false);
         }
+    }
+
+    public void Clear()
+    {
+
     }
 }
