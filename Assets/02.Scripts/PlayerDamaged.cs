@@ -10,14 +10,13 @@ public class PlayerDamaged : MonoBehaviour
     Image hpBar;
     [SerializeField]
     Text hpText;
-    [SerializeField]
-    [Range(1, 100000)]
+    [SerializeField][Range(1, 100000)]
     int maxHp;
-    int curHp;
     [SerializeField]
     GameObject screenPanel;
 
     public bool isDie { get; private set; } = false;
+    public int curHp { get; private set; }
 
     void OnEnable()
     {

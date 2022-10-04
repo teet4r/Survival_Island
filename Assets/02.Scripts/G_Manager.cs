@@ -12,15 +12,15 @@ using UnityEngine.UI;
 /// </summary>
 public class G_Manager : MonoBehaviour
 {
+    public static G_Manager instance = null;
+
     public Transform[] points;
     public GameObject zombiePrefab;
     public GameObject monsterPrefab;
     public GameObject skeletonPrefab;
     public int total { get; private set; } = 0;
-    public static G_Manager instance = null;
 
-    [SerializeField]
-    [Range(0.1f, 10f)]
+    [SerializeField][Range(0.1f, 10f)]
     float responTime;
     float timePrev;
     [SerializeField]

@@ -21,6 +21,7 @@ public class BulletCtrl : MonoBehaviour
 
     void OnEnable()
     {
+        if (speed <= 0f) speed = 100f;
         rigidbody.AddForce(transform.forward * speed);
 
         //Destroy(gameObject, 3f);
